@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             spinner.adapter = adapter
         }
 
-
+        val resources = getResources().getStringArray(R.array.calculate_mode)
         binding.btnSubmit.setOnClickListener {
             val inputData = binding.inputData
             val result = binding.result
@@ -38,7 +38,14 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 if (data.isNotEmpty()) {
-                    data = utils.sortArray(data as ArrayList<Int>)
+                    data = when (spinner.selectedItem) {
+                        resources[0] -> utils.sortArray(data as ArrayList<Int>)
+                        resources[1] -> utils.multiplyArray(data as ArrayList<Int>)
+                        resources[2] -> utils.evenOddArray(data as ArrayList<Int>)
+                        else -> {
+                            data
+                        }
+                    }
                     result.text = data.toString()
                     setResultVisibility(visible = true)
 
