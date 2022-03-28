@@ -1,7 +1,12 @@
-# Android app to proess array
+# Android app to process array
 
-## Sort array
+## Requirments 
+`minSdk 29 targetSdk 32`
 
-## Multiply Array
+## Functionality
+How to use 
+`Select mode -> input text (format given) -> Solve`
 
-## Even odd array
+### Sort array
+### Multiply Array
+### Even odd array
