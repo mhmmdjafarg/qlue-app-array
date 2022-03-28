@@ -1,6 +1,6 @@
 # Android app to process array
 
-## Requirments 
+## Requirements 
 `minSdk 29 targetSdk 32`
 
 ## Functionality
